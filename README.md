@@ -3,7 +3,7 @@ This is a project for the Taipaleen leirikeskus websites
 ### Roles:
 - Topi: Scrum master
 - Eero: Graphic designer
-- Milos: Headprogrammer
+- Milos: Head programmer
 - Katariina: Programmer
 ## Purpose of this project
  To create working and beatiful websites for Taipaleen camping center.
