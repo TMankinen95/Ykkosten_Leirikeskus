@@ -14,3 +14,6 @@ This is a project for the Taipaleen leirikeskus websites
 2. Then check that you have the codes
 3. Open the codes in your browser
 4. Admire the product :)
+
+## Techology
+We used HTML, CSS and a bit of javascript
