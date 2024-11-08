@@ -1,0 +1,165 @@
+*{
+    text-align: center;
+}
+
+
+
+h1, h2, h3 {
+    color: #00b300; 
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*Napit*/
+button {
+    background-color: #00b300; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #006600; 
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Navi tyyli*/
+.navbar-horizontal {
+    background-color: #006600; 
+    padding: 10px 0;
+}
+
+.navbar-horizontal ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+}
+
+.navbar-horizontal li {
+    margin: 0 15px; 
+}
+
+.navbar-horizontal a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.navbar-horizontal a:hover {
+    background-color: #244126; 
+    color: #e0e0e0; 
+}
+
+/*Footer navi*/
+.navbar-footer {
+    background-color: #c68c53;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.navbar-footer ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+}
+
+.navbar-footer li {
+    margin: 0 15px; 
+}
+
+.navbar-footer a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.navbar-footer a:hover {
+    background-color: #935e2c; 
+    color: #e0e0e0; 
+}
+
+/*lomake majoitus*/
+.reservation1-form {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.form-container {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
