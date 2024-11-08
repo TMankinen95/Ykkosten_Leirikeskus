@@ -4,61 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taipaleen leirintäkeskus tilat</title>
+    <link rel="stylesheet" href="/taipaletyyli.CSS"> 
+    <script>
+        function toggleForm() {
+    const form = document.getElementById("reservationForm");
+    form.style.display = form.style.display === "none" ? "block" : "none";
+}
+
+    </script> 
 </head>
 <body>
     <header>
         <nav class="navbar-horizontal">
-        <ul>
-            <li><a href="/index.HTML">Etusivu</a></li>
-            <li><a href="/Toiminta.HTML">Toiminta</a></li>
-            <li><a href="/Majoitus.HTML">Majoitus</a></li>
-            <li><a href="/Ruokailu.HTML">Ruokailu</a></li>
-            <li><a href="/Tilat.HTML">Tilat</a></li>
-            <li><a href="/Yhteystiedot.HTML">Yhteystiedot</a></li>
-        </ul>
+            <ul>
+                <li><a href="/index.html">Etusivu</a></li>
+                <li><a href="/Toiminta.html">Toiminta</a></li>
+                <li><a href="/Majoitus.html">Majoitus</a></li>
+                <li><a href="/Ruokailu.html">Ruokailu</a></li>
+                <li><a href="/Tilat.html">Tilat</a></li>
+                <li><a href="/Yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
         </nav>
-</header>
-<main>
-    <section>
-        <h1>Tilat</h1>
-        <p>Meiltä löytyy vuokrattavia tiloja eri tarpeisiin.</p>
-    </section>
+    </header>
+    
+    <main>
+        <section>
+            <h1>Tilat</h1>
+            <p>Meiltä löytyy vuokrattavia tiloja eri tarpeisiin.</p>
+        </section>
 
-    <section id="juhlatila">
-        <h2>Juhlatila</h2>
-        <p>Ruokasalimme on suunniteltu maksimissaan 80 hengelle, ja se soveltuu hyvin esimerkiksi häiden tai syntymäpäiväjuhlien järjestämiseen. Tilassa voidaan myös järjestää kokouksia, ja tarjoamme pitopalvelun tilaisuuksia varten.</p>
-        <p>Hinnat:</p>
-        <ul>
-            <li>Kesäkaudella: 50 € / tunti</li>
-            <li>Talvikaudella: 35 € / tunti</li>
-        </ul>
-        <p>Pitopalvelu maksaa erikseen.</p>
-    </section>
+        <section id="juhlatila">
+            <h2>Juhlatila</h2>
+            <p>Ruokasalimme on suunniteltu maksimissaan 80 hengelle, ja se soveltuu hyvin esimerkiksi häiden tai syntymäpäiväjuhlien järjestämiseen. Tilassa voidaan myös järjestää kokouksia, ja tarjoamme pitopalvelun tilaisuuksia varten.</p>
+            <p>Hinnat:</p>
+            <ul>
+                <li>Kesäkaudella: 50 € / tunti</li>
+                <li>Talvikaudella: 35 € / tunti</li>
+            </ul>
+            <p>Pitopalvelu maksaa erikseen.</p>
+        </section>
 
-    <section id="kokoustila">
-        <h2>Kokoustila</h2>
-        <p>Kokoustilaamme mahtuu enintään 35 henkilöä. Kokouksiin on myös mahdollista tilata kahvitarjoilu pitopalvelustamme lisähintaan.</p>
-        <p>Hinta: 29 € / tunti</p>
-    </section>
+        <section id="kokoustila">
+            <h2>Kokoustila</h2>
+            <p>Kokoustilaamme mahtuu enintään 35 henkilöä. Kokouksiin on myös mahdollista tilata kahvitarjoilu pitopalvelustamme lisähintaan.</p>
+            <p>Hinta: 29 € / tunti</p>
+        </section>
 
-    <section id="luokkahuone">
-        <h2>Luokkahuone</h2>
-        <p>Luokkahuoneemme on tarkoitettu pienempiin tapaamisiin, ja siihen mahtuu korkeintaan 30 henkilöä. Se soveltuu hyvin esimerkiksi pienempiin kokouksiin tai koulutuksiin. Kahvitarjoilu voidaan tilata pitopalvelustamme lisähintaan.</p>
-        <p>Hinta: 25 € / tunti</p>
-    </section>
+        <section id="luokkahuone">
+            <h2>Luokkahuone</h2>
+            <p>Luokkahuoneemme on tarkoitettu pienempiin tapaamisiin, ja siihen mahtuu korkeintaan 30 henkilöä. Se soveltuu hyvin esimerkiksi pienempiin kokouksiin tai koulutuksiin. Kahvitarjoilu voidaan tilata pitopalvelustamme lisähintaan.</p>
+            <p>Hinta: 25 € / tunti</p>
+        </section>
 
-    <section id="tiedustelut">
-        <h2>Tiedustelut</h2>
-        <p>Voit tehdä tiedusteluja ja varauksia <a href="#">tästä</a>. <!--(Avautuu lomake)--></p>
-    </section>
-</main>
-<footer>
-    <nav class="navbar-footer">
-        <ul>
-            <li><a href="#">Yhteystiedot</a></li>
-        </ul>
-    </nav>
-    <p>Copyright @taipaleenleirinta</p>
-</footer>
+        <section id="tiedustelut">
+            <h2>Tiedustelut</h2>
+            <p>Voit tehdä tiedusteluja ja varauksia <button onclick="toggleForm()">tästä</button></p>
+            
+            
+            <div id="reservationForm" class="form-container" style="display: none;">
+                <h3>Tilojen Varauslomake</h3>
+                <form>
+                    <label for="name">Nimi:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Sähköposti:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Puhelinnumero:</label>
+                    <input type="text" id="phone" name="phone" required>
+
+                    <label for="space">Valitse tila:</label>
+                    <select id="space" name="space" required>
+                        <option value="juhlatila">Juhlatila</option>
+                        <option value="kokoustila">Kokoustila</option>
+                        <option value="luokkahuone">Luokkahuone</option>
+                    </select>
+
+                    <label for="date">Päivämäärä:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Aloitusaika:</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <label for="duration">Kesto (tuntia):</label>
+                    <input type="number" id="duration" name="duration" min="1" required>
+
+                    <button type="submit">Lähetä varaus</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="navbar-footer">
+            <ul>
+                <li><a href="#">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <p>Copyright © taipaleenleirinta</p>
+    </footer>
 </body>
 </html>

@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taipaleen leirintäkeskus majoitus</title>
+    <title>Taipaleen leirintäkeskus Majoitus</title>
+    <link rel="stylesheet" href="taipaletyyli.CSS">
+    <script>
+        function toggleForm(formId) {
+            let form = document.getElementById(formId);
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
     <header>
         <nav class="navbar-horizontal">
-        <ul>
-            <li><a href="/index.HTML">Etusivu</a></li>
-            <li><a href="/Toiminta.HTML">Toiminta</a></li>
-            <li><a href="/Majoitus.HTML">Majoitus</a></li>
-            <li><a href="/Ruokailu.HTML">Ruokailu</a></li>
-            <li><a href="/Tilat.HTML">Tilat</a></li>
-            <li><a href="/Yhteystiedot.HTML">Yhteystiedot</a></li>
-        </ul>
+            <ul>
+                <li><a href="/index.html">Etusivu</a></li>
+                <li><a href="/Toiminta.html">Toiminta</a></li>
+                <li><a href="/Majoitus.html">Majoitus</a></li>
+                <li><a href="/Ruokailu.html">Ruokailu</a></li>
+                <li><a href="/Tilat.html">Tilat</a></li>
+                <li><a href="/Yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
         </nav>
-</header>
+    </header>
 
     <main>
         <section>
@@ -25,56 +32,127 @@
             <p>Tämä sivu esittelee leirintäkeskuksen majoitusvaihtoehtoja ja sen kautta voi varata majoitusta.</p>
         </section>
 
+        <!-- Mökit -->
         <section id="mokit">
             <h2>Mökit</h2>
             <p>Meillä voit vuokrata mökin, teltan, asuntoauto- tai vaunupaikan tai huoneen päärakennukselta.</p>
+
             <h3>Pienet mökit</h3>
             <p>Pieniä neljän hengen mökkejä löytyy kuusi kappaletta. Niihin voi pedata myös yhden lisävuoteen sohvalle.</p>
             <p>Vuorokausihinta: 70 €</p>
-            <button>Vuokraa pieni mökki tästä</button>
+            <button onclick="toggleForm('small-cabin-form')">Vuokraa pieni mökki tästä</button>
+            <div id="small-cabin-form" class="reservation1-form">
+                <h3>Pienen mökin varauslomake</h3>
+                <form>
+                    <label>Saapumispäivä:</label>
+                    <input type="date" required>
+                    <label>Lähtöpäivä:</label>
+                    <input type="date" required>
+                    <label>Vierasmäärä:</label>
+                    <input type="number" min="1" max="5" required>
+                    <button type="submit">Varaa</button>
+                </form>
+            </div>
 
             <h3>Isot mökit</h3>
             <p>Suurempia kahdeksan hengen mökkejä on kymmenen kappaletta.</p>
             <p>Vuorokausihinta: 100 €</p>
-            <button>Vuokraa suuri mökki tästä</button>
+            <button onclick="toggleForm('large-cabin-form')">Vuokraa suuri mökki tästä</button>
+            <div id="large-cabin-form" class="reservation1-form">
+                <h3>Suuren mökin varauslomake</h3>
+                <form>
+                    <label>Saapumispäivä:</label>
+                    <input type="date" required>
+                    <label>Lähtöpäivä:</label>
+                    <input type="date" required>
+                    <label>Vierasmäärä:</label>
+                    <input type="number" min="1" max="8" required>
+                    <button type="submit">Varaa</button>
+                </form>
+            </div>
         </section>
 
+        <!-- Teltat -->
         <section id="teltat">
             <h2>Teltat</h2>
-            <p>Meillä on oma telttailualue, jolta voi vuokrata telttamajoituksen nukkumisvarusteineen. Telttojen koot vaihtelevat kolmen hengen teltasta kuuden hengen telttaan.</p>
+            <p>Meillä on oma telttailualue, jolta voi vuokrata telttamajoituksen nukkumisvarusteineen.</p>
             <p>Vuorokausihinta: 5 € + 10 € per yöpyjä</p>
-            <p>Telttamajoitusta on tarjolla kesäkuun alusta syyskuun loppuun.</p>
-            <button>Varaa telttamajoitus tästä</button>
+            <button onclick="toggleForm('tent-form')">Varaa telttamajoitus tästä</button>
+            <div id="tent-form" class="reservation1-form">
+                <h3>Telttamajoituksen varauslomake</h3>
+                <form>
+                    <label>Saapumispäivä:</label>
+                    <input type="date" required>
+                    <label>Lähtöpäivä:</label>
+                    <input type="date" required>
+                    <label>Vierasmäärä:</label>
+                    <input type="number" min="1" required>
+                    <button type="submit">Varaa</button>
+                </form>
+            </div>
         </section>
 
+        <!-- Asuntoauto-->
         <section id="asuntoautopaikat">
             <h2>Asuntoautopaikat</h2>
-            <p>Asuntoautoille ja -vaunuille on joukko omia paikkoja, joilla on jaettu huoltorakennus. Paikkoja löytyy kahdellekymmenelle kulkuneuvolle.</p>
+            <p>Asuntoautoille ja -vaunuille on joukko omia paikkoja, joilla on jaettu huoltorakennus.</p>
             <p>Vuorokausihinta: 20 €</p>
-            <button>Varaa asuntoautopaikka tästä</button>
+            <button onclick="toggleForm('caravan-form')">Varaa asuntoautopaikka tästä</button>
+            <div id="caravan-form" class="reservation1-form">
+                <h3>Asuntoautopaikan varauslomake</h3>
+                <form>
+                    <label>Saapumispäivä:</label>
+                    <input type="date" required>
+                    <label>Lähtöpäivä:</label>
+                    <input type="date" required>
+                    <button type="submit">Varaa</button>
+                </form>
+            </div>
         </section>
 
+        <!-- Hotelli -->
         <section id="hotellimajoitus">
             <h2>Hotellimajoitus</h2>
-            <p>Päärakennuksessamme on hotellihuoneita 30 kappaletta: 20 kahden hengen huonetta ja 10 neljän hengen huonetta. Jokaisessa huoneessa on oma kylpyhuone ja pieni keittiö.</p>
-            <p>Aamiainen kuuluu huoneiden hintaan.</p>
+            <p>Päärakennuksessamme on hotellihuoneita 30 kappaletta. Aamiainen kuuluu huoneiden hintaan.</p>
+
             <h3>Kahden hengen huone</h3>
             <p>Vuorokausihinta: 90 €</p>
-            <button>Varaa kahden hengen huone tästä</button>
+            <button onclick="toggleForm('double-room-form')">Varaa kahden hengen huone tästä</button>
+            <div id="double-room-form" class="reservation1-form">
+                <h3>Kahden hengen huoneen varauslomake</h3>
+                <form>
+                    <label>Saapumispäivä:</label>
+                    <input type="date" required>
+                    <label>Lähtöpäivä:</label>
+                    <input type="date" required>
+                    <button type="submit">Varaa</button>
+                </form>
+            </div>
 
             <h3>Neljän hengen huone</h3>
             <p>Vuorokausihinta: 130 €</p>
-            <button>Varaa neljän hengen huone tästä</button>
+            <button onclick="toggleForm('quad-room-form')">Varaa neljän hengen huone tästä</button>
+            <div id="quad-room-form" class="reservation1-form">
+                <h3>Neljän hengen huoneen varauslomake</h3>
+                <form>
+                    <label>Saapumispäivä:</label>
+                    <input type="date" required>
+                    <label>Lähtöpäivä:</label>
+                    <input type="date" required>
+                    <button type="submit">Varaa</button>
+                </form>
+            </div>
         </section>
-    
-</main>
-<footer>
-    <nav class="navbar-footer">
-        <ul>
-            <li><a href="#">Yhteystiedot</a></li>
-        </ul>
-    </nav>
-    <p>Copyright @taipaleenleirinta</p>
-</footer>
+    </main>
+
+    <footer>
+        <nav class="navbar-footer">
+            <ul>
+                <li><a href="#">Yhteystiedot</a></li>
+                
+            </ul>
+        </nav>
+        <p>Copyright @taipaleenleirinta</p>
+    </footer>
 </body>
 </html>
