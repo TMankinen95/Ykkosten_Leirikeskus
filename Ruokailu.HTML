@@ -65,6 +65,45 @@
         <p>Muina aikoina ruokailun voi tilata vähintään kuuden hengen ryhmille ruokalistamme mukaisesti. Tilaus tulee tehdä vähintään kolme vuorokautta aikaisemmin.</p>
         <p>Meiltä saa myös kaikkiin tiloissamme pidettäviin juhliin pitopalvelun.</p>
     </section>
+      
+    <section >
+        <h2>Tilauslomake</h2>
+        <form>
+            <input type="text" name="Tilaajan nimi">
+            <label for="Tilaajan nimi">Tilaajan nimi:</label>
+         </form>
+    </section>
+    
+    <section>
+    <form>
+        <input type="text" name="Huone numero">
+        <label for="Huone numero">Huone numero:</label>
+    </form>
+    </section>
+
+    <section>
+        <form>
+            <textarea name="Ruoka tilaus" cols="21" rows="13"></textarea>
+            <label for="Ruoka tilaus">Ruoka tilaus:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <select name="Maksu heti vai huoneen hintaan">
+                <option value="-------">-------</option>
+                <option value="Heti">Heti</option>
+                <option value="Huoneen">Huoneen</option>
+                </select>
+                <label for="Maksu heti vai huoneen hintaan">Maksu heti vai huoneen hintaan:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+        <input type="button" onclick="alert('Kiitos tilauksesta!')" value="Tee Tilaus">
+        </form>
+    </section>
 </main>
 <footer>
     <nav class="navbar-footer">
