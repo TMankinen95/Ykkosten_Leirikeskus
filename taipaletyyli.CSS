@@ -182,7 +182,10 @@ button:hover {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
+.navbar-horizontal img{
+    width: 100px;
+    height: 100px;
+}
 .navbar-horizontal a:hover {
     background-color: #244126; 
     color: #e0e0e0; 
