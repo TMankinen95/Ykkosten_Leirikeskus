@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taipaleen leirintäkeskus ruokailu</title>
+    <link rel="stylesheet" href="/taipaletyyli.CSS">
 </head>
 <body>
     <header>
@@ -67,7 +68,7 @@
     </section>
       
     <section >
-        <h2>Tilauslomake</h2>
+        <h2>Ruoka tilaus huoneeseen</h2>
         <form>
             <input type="text" name="Tilaajan nimi">
             <label for="Tilaajan nimi">Tilaajan nimi:</label>
@@ -104,6 +105,45 @@
         <input type="button" onclick="alert('Kiitos tilauksesta!')" value="Tee Tilaus">
         </form>
     </section>
+
+    <section>
+        <h3>Ravintola tilauslomake</h3>
+        <form>
+            <input type="text" name="Tilaajan nimi">
+            <label for="Tilaajan nimi">Tilaajan nimi:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <input type="text" name="Pöytänumero">
+            <label for="Pöytänumero">Pöytänumero:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <textarea name="Ruoka tilaus" cols="21" rows="13"></textarea>
+            <label for="Ruoka tilaus">Ruoka tilaus:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <select name="Tarjoillaanko jälkiruoka heti vai ruokailun jälkeen">
+                <option value="-------">-------</option>
+                <option value="Heti">Heti</option>
+                <option value="Ruokailun">Ruokailun</option>
+                </select>
+                <label for="Tarjoillaanko jäkiruoka heti vai ruokailun jälkeen">Tarjoillaanko jälkiruoka heti vai ruokailun jälkeen:</label>
+        </form>
+    </section>
+
+<section>
+    <form>
+        <input type="button" onclick="alert('Kiitos tilauksesta!')" value="Tee Tilaus">
+        </form>
+</section>
 </main>
 <footer>
     <nav class="navbar-footer">
