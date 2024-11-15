@@ -3,12 +3,38 @@
     font-family: 'Coiny', system-ui;
     font-weight: 100;
     font-style: normal;
+    color: #ffffff;
+    font-size: 30px;
 }
 
-/*body{
-    background-image: url(/Kuvat/Etusivi\ kuva\ 1.jpg);
-} */
-
+body{
+    background-image: url('/Kuvat/Taustakuva.png');
+    background-size: cover;   
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+} 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px); /* Blur the background */
+    z-index: -1; /* Keep the blur behind all content */
+}
+.content-container {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
 h1, h2, h3 {
     color: #00b300; 
     text-align: center;
