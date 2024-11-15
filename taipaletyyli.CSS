@@ -6,8 +6,27 @@
     color: #ffffff;
     font-size: 30px;
 }
+@media (max-width: 768px) {
+    .content-container {
+        padding: 20px;
+        margin: 20px; 
+    }
+
+    .Etusivu_kuvat {
+        grid-template-columns: 1fr; 
+    }
+
+    h1 {
+        font-size: 2em; 
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+}
 
 body{
+    min-height: 100vh;
     background-image: url('/Kuvat/Taustakuva.png');
     background-size: cover;   
     background-position: center center; 
@@ -27,16 +46,11 @@ body::before {
     filter: blur(8px); /* Blur the background */
     z-index: -1; /* Keep the blur behind all content */
 }
-.content-container {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 30px;
-    border-radius: 10px;
-    margin: 0 auto; 
-    max-width: 1200px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+main {
+    flex: 1; 
 }
 h1, h2, h3 {
-    color: #00b300; 
+    color: #ffffff; 
     text-align: center;
     margin-bottom: 15px;
 }
@@ -116,17 +130,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*Navi tyyli*/
 .navbar-horizontal {
     background-color: #006600; 
@@ -165,33 +168,34 @@ button:hover {
     background-color: #c68c53;
     padding: 10px 0;
     margin-top: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 .navbar-footer ul {
-    list-style-type: none; 
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
 .navbar-footer li {
-    margin: 0 15px; 
+    margin: 0 15px;
 }
 
 .navbar-footer a {
     text-decoration: none;
-    color: white; 
+    color: white;
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-
 .navbar-footer a:hover {
-    background-color: #935e2c; 
-    color: #e0e0e0; 
+    background-color: #935e2c;
+    color: #e0e0e0;
 }
 
 /*lomake majoitus/ruokailu kautta kaikki muu*/
