@@ -55,7 +55,11 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-
+#hotellimajoitus img{
+    width: 450px;
+    height: 350px;
+    border-radius: 30px;
+}
 /*Napit*/
 button {
     background-color: #00b300; 
