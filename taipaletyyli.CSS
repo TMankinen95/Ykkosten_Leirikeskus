@@ -216,6 +216,15 @@ textarea {
     margin-bottom: 20px; 
 }
 
+#aamiainen ul, #lounas ul, #illallinen ul {
+    list-style-type: none;  
+    padding-left: 0;      
+}
+
+#aamiainen li, #lounas li, #illallinen li {
+    margin-bottom: 8px;  
+}
+
 .order-btn {
     background-color: #28a745; 
     color: white; 
@@ -290,3 +299,25 @@ label {
     width: 100%; 
     height: 300px; 
     object-fit: cover; }
+
+    #aamiainen, #lounas, #illallinen {
+        text-align: center;
+    }
+    
+  
+    #aamiainen img, #lounas img, #illallinen img {
+        max-width: 100%;       
+        width: auto;          
+        height: auto;        
+        max-height: 400px;    
+        margin: 0 auto;         
+        display: block;         
+        border-radius: 8px;     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+    
+
+    #aamiainen img:hover, #lounas img:hover, #illallinen img:hover {
+        transform: scale(1.05);  
+        transition: transform 0.3s ease-in-out; 
+    }
