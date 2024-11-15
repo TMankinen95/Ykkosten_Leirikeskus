@@ -1,8 +1,13 @@
 *{
     text-align: center;
+    font-family: 'Coiny', system-ui;
+    font-weight: 100;
+    font-style: normal;
 }
 
-
+/*body{
+    background-image: url(/Kuvat/Etusivi\ kuva\ 1.jpg);
+} */
 
 h1, h2, h3 {
     color: #00b300; 
@@ -62,11 +67,6 @@ button:hover {
     height: 100%;
     object-fit: cover; 
 }
-
-
-
-
-
 
 
 
@@ -168,7 +168,8 @@ button:hover {
     color: #e0e0e0; 
 }
 
-/*lomake majoitus*/
+/*lomake majoitus/ruokailu kautta kaikki muu*/
+
 .reservation1-form {
     display: none;
     margin-top: 10px;
@@ -185,16 +186,138 @@ button:hover {
     margin-top: 10px;
 }
 
-input[type="text"], input[type="email"], input[type="number"], select, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 30%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    color: #000000; 
+    background-color: #f7f7f7; 
+    transition: all 0.3s ease; 
+}
+textarea {
+    width: 20%;
+    height: 200px;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 16px; 
+    font-family: 'Coiny', system-ui, sans-serif; 
+    background-color: #f7f7f7; 
+    color: #333; 
+    resize: vertical; 
+    transition: all 0.3s ease; 
+    margin-bottom: 20px; 
 }
 
+#aamiainen ul, #lounas ul, #illallinen ul {
+    list-style-type: none;  
+    padding-left: 0;      
+}
+
+#aamiainen li, #lounas li, #illallinen li {
+    margin-bottom: 8px;  
+}
+
+.order-btn {
+    background-color: #28a745; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.1s; 
+}
+
+.order-btn:hover {
+    background-color: #218838; 
+}
+
+.order-btn:active {
+    background-color: #1e7e34; 
+    transform: scale(0.98); 
+}
+
+textarea:focus {
+    outline: none; 
+    border-color: #00b300; 
+    box-shadow: 0 0 10px rgba(0, 179, 0, 0.5); 
+}
+
+select {
+    width: 30%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-family: 'Coiny', system-ui, sans-serif; 
+    background-color: #f7f7f7; 
+    color: #333; 
+    transition: all 0.3s ease; 
+    margin-bottom: 20px; 
+}
+
+form label {
+    font-weight: bold; 
+    color: #333; 
+    font-size: 16px; 
+    margin-bottom: 5px; 
+    display: block; 
+}
+
+select:focus {
+    outline: none; 
+    border-color: #00b300; 
+    box-shadow: 0 0 10px rgba(0, 179, 0, 0.5); 
+}
+
+/* Hover effect for <select> */
+select:hover {
+    border-color: #007b00; 
+}
 label {
     font-weight: bold;
     color: #333;
 }
+
+
+
+.Etusivu_kuvat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+  
+  .Etusivu_kuvat img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; }
+
+    #aamiainen, #lounas, #illallinen {
+        text-align: center;
+    }
+    
+  
+    #aamiainen img, #lounas img, #illallinen img {
+        max-width: 100%;       
+        width: auto;          
+        height: auto;        
+        max-height: 400px;    
+        margin: 0 auto;         
+        display: block;         
+        border-radius: 8px;     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+    
+
+    #aamiainen img:hover, #lounas img:hover, #illallinen img:hover {
+        transform: scale(1.05);  
+        transition: transform 0.3s ease-in-out; 
+    }
