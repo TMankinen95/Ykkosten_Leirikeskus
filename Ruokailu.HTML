@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taipaleen leirintäkeskus ruokailu</title>
+    <link rel="stylesheet" href="/taipaletyyli.CSS">
+    <link rel="icon" type="logo" href="/Kuvat/Logo2.png">
+       <style>
+        body {
+            background-image: url(https://raw.githubusercontent.com/TMankinen95/Ykkosten_Leirikeskus/0e47d647b8dd3f02a521311efa4cdef8a6d03857/Kuvat/Taustakuva.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+       </style>
 </head>
 <body>
     <header>
         <nav class="navbar-horizontal">
         <ul>
+            <li><img src="/Kuvat/Logo2.png" alt="logo"></li>
             <li><a href="/index.HTML">Etusivu</a></li>
             <li><a href="/Toiminta.HTML">Toiminta</a></li>
             <li><a href="/Majoitus.HTML">Majoitus</a></li>
@@ -26,6 +37,7 @@
 
     <section id="aamiainen">
         <h2>Aamiainen</h2>
+        <img src="/Kuvat/Aamiainen.png" alt="Aamiainen">
         <p>Ravintola Taival tarjoaa joka aamu monipuolisen aamiaisen yöpyjille:</p>
         <ul>
             <li>Aikuiset: 8 €</li>
@@ -37,6 +49,7 @@
 
     <section id="lounas">
         <h2>Lounas</h2>
+        <img src="/Kuvat/Lounas.png" alt="lounas">
         <p>Kesäkaudella ravintolamme tarjoaa maukkaan ja kesäisen lounaan noutopöydästä.</p>
         <p>Lounasaika: 11-14</p>
         <p>Hinnat:</p>
@@ -50,6 +63,7 @@
 
     <section id="illallinen">
         <h2>Illallinen</h2>
+        <img src="/Kuvat/Illallinen.png" alt="Illallinen">
         <p>Kesäkaudella ravintolamme tarjoaa myös illallista noutopöydästä.</p>
         <p>Illallisaika: 17-20</p>
         <p>Hinnat:</p>
@@ -65,14 +79,95 @@
         <p>Muina aikoina ruokailun voi tilata vähintään kuuden hengen ryhmille ruokalistamme mukaisesti. Tilaus tulee tehdä vähintään kolme vuorokautta aikaisemmin.</p>
         <p>Meiltä saa myös kaikkiin tiloissamme pidettäviin juhliin pitopalvelun.</p>
     </section>
+      
+    <section >
+        <h2>Ruoka tilaus huoneeseen</h2>
+        <form>
+            <input type="text" name="Tilaajan nimi">
+            <label for="Tilaajan nimi">Tilaajan nimi:</label>
+         </form>
+    </section>
+    
+    <section>
+    <form>
+        <input type="text" name="Huone numero">
+        <label for="Huone numero">Huone numero:</label>
+    </form>
+    </section>
+
+    <section>
+        <form>
+            <textarea name="Ruoka tilaus" cols="21" rows="13"></textarea>
+            <label for="Ruoka tilaus">Ruoka tilaus:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <select name="Maksu heti vai huoneen hintaan">
+                <option value="-------">-------</option>
+                <option value="Heti">Heti</option>
+                <option value="Huoneen">Huoneen</option>
+                </select>
+                <label for="Maksu heti vai huoneen hintaan">Maksu heti vai huoneen hintaan:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+        <input type="button" onclick="alert('Kiitos tilauksesta!')" value="Tee Tilaus" class="order-btn">
+        </form>
+    </section>
+
+    <section>
+        <h3>Ravintola tilauslomake</h3>
+        <form>
+            <input type="text" name="Tilaajan nimi">
+            <label for="Tilaajan nimi">Tilaajan nimi:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <input type="text" name="Pöytänumero">
+            <label for="Pöytänumero">Pöytänumero:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <textarea name="Ruoka tilaus" cols="21" rows="13"></textarea>
+            <label for="Ruoka tilaus">Ruoka tilaus:</label>
+        </form>
+    </section>
+
+    <section>
+        <form>
+            <select name="Tarjoillaanko jälkiruoka heti vai ruokailun jälkeen">
+                <option value="-------">-------</option>
+                <option value="Heti">Heti</option>
+                <option value="Ruokailun">Ruokailun</option>
+                </select>
+                <label for="Tarjoillaanko jäkiruoka heti vai ruokailun jälkeen">Tarjoillaanko jälkiruoka heti vai ruokailun jälkeen:</label>
+        </form>
+    </section>
+
+<section>
+    <form>
+        <input type="button" onclick="alert('Kiitos tilauksesta!')" value="Tee Tilaus" class="order-btn">
+        </form>
+</section>
+
+
 </main>
 <footer>
     <nav class="navbar-footer">
         <ul>
             <li><a href="#">Yhteystiedot</a></li>
         </ul>
+        <p>Copyright @taipaleenleirinta</p>
     </nav>
-    <p>Copyright @taipaleenleirinta</p>
+    
 </footer>
 </body>
 </html>
