@@ -150,11 +150,6 @@ button:hover {
 
 
 
-
-
-
-
-
 /*Navi tyyli*/
 .navbar-horizontal {
     background-color: #006600; 
@@ -225,7 +220,45 @@ button:hover {
     background-color: #935e2c;
     color: #e0e0e0;
 }
+/*Responsiviviiviv*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
 
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .navbar-horizontal ul {
+        flex-direction: column;
+    }
+
+    .navbar-footer ul {
+        flex-direction: column;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form select,
+    form textarea {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+        max-width: 200px;
+    }
+}
 /*lomake majoitus/ruokailu kautta kaikki muu*/
 
 .reservation1-form {
@@ -235,6 +268,7 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    color: #000000;
 }
 .form-container {
     background-color: #f8f8f8;
@@ -242,6 +276,7 @@ button:hover {
     padding: 15px;
     border-radius: 5px;
     margin-top: 10px;
+    color: #000000;
 }
 
 form input[type="text"],
@@ -268,13 +303,13 @@ textarea {
     font-size: 16px; 
     font-family: 'Coiny', system-ui, sans-serif; 
     background-color: #f7f7f7; 
-    color: #333; 
+    color: #000000; 
     resize: vertical; 
     transition: all 0.3s ease; 
     margin-bottom: 20px; 
 }
 
-#aamiainen ul, #lounas ul, #illallinen ul {
+#aamiainen ul, #lounas ul, #illallinen,  ul {
     list-style-type: none;  
     padding-left: 0;      
 }
@@ -317,14 +352,14 @@ select {
     font-size: 16px; 
     font-family: 'Coiny', system-ui, sans-serif; 
     background-color: #f7f7f7; 
-    color: #333; 
+    color: #000000; 
     transition: all 0.3s ease; 
     margin-bottom: 20px; 
 }
 
 form label {
     font-weight: bold; 
-    color: #333; 
+    color: #000000; 
     font-size: 16px; 
     margin-bottom: 5px; 
     display: block; 
@@ -339,10 +374,11 @@ select:focus {
 /* Hover effect for <select> */
 select:hover {
     border-color: #007b00; 
+    color: #000000;
 }
 label {
     font-weight: bold;
-    color: #333;
+    color: #000000;
 }
 
 
@@ -363,7 +399,7 @@ label {
     }
     
   
-    #aamiainen img, #lounas img, #illallinen img {
+    #aamiainen img, #lounas img, #illallinen img, #juhlatila img, #luokkahuone img {
         max-width: 100%;       
         width: auto;          
         height: auto;        
