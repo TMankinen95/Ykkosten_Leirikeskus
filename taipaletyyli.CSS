@@ -296,7 +296,7 @@ form textarea {
 }
 textarea {
     width: 20%;
-    height: 200px;
+    height: 100px;
     padding: 12px; 
     border: 1px solid #ccc; 
     border-radius: 5px;
